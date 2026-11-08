@@ -1,4 +1,4 @@
-/* PlayCode homepage — language hint + inquiry forms (docs/design/07-website.md §11). No dependencies. */
+/* PlayCode homepage — language hint + FAQ anchors + inquiry forms (docs/design/07-website.md §11). No dependencies. */
 (function () {
   'use strict';
 
@@ -22,6 +22,17 @@
       try { localStorage.setItem('pcs.langhint', '1'); } catch (err) { /* ignore */ }
     });
   } catch (e) { /* the hint is optional */ }
+
+  // ── FAQ: a link to #<question> opens that answer ─────────────────────────────
+  function openTarget() {
+    try {
+      var id = decodeURIComponent((location.hash || '').slice(1));
+      var el = id ? document.getElementById(id) : null;
+      if (el && el.tagName === 'DETAILS') el.open = true;
+    } catch (e) { /* bad hash */ }
+  }
+  openTarget();
+  window.addEventListener('hashchange', openTarget);
 
   // ── inquiry forms → <supabase>/functions/v1/inquiry-submit ───────────────────
   var MAX = 4000;

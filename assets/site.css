@@ -218,9 +218,19 @@ main { display: block; outline: none; }
 @media (min-width: 900px) { .two { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } }
 .stack { display: grid; gap: 16px; }
 .two h2, .narrow h2 { font-size: 1.2rem; }
-.faq { border-top: 1px solid var(--line); }
-.faq summary { min-height: 44px; display: flex; align-items: center; cursor: pointer; font-weight: 600; padding: 8px 0; }
+.faqs { margin-top: 8px; }
+.faq { border-top: 1px solid var(--line); scroll-margin-top: 88px; }
+.faq summary { min-height: 44px; display: flex; align-items: center; gap: 12px; cursor: pointer; font-weight: 600; padding: 8px 0; list-style: none; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; content: "+" / ""; margin-left: auto; flex: none; width: 24px; text-align: center; font-family: var(--mono); color: var(--accent-fg); }
+.faq[open] summary::after { content: "−"; content: "−" / ""; }
 .faq p { color: var(--muted); }
+.faq-a { padding: 0 0 14px; color: var(--muted); }
+.faq-a h4 { font-size: 1rem; color: var(--text); margin: 1.2em 0 .4em; }
+.faq-link { margin: 6px 0 0; font-size: .85rem; }
+.faq-link a { font-family: var(--mono); color: var(--faint); text-decoration: none; }
+.faq-link a:hover { color: var(--accent-fg); }
+.faq:target summary { color: var(--accent-fg); }
 .mail-cta { font-size: 1.05rem; }
 .mail-cta a { font-weight: 700; overflow-wrap: anywhere; }
 
@@ -269,3 +279,9 @@ main { display: block; outline: none; }
   body { background: #fff; color: #000; }
   .panel { box-shadow: none; border: 0; background: none; }
 }
+
+/* press kit (/<slug>/press/) */
+.press-files { list-style: none; margin: 0; padding: 0; display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr)); }
+.press-files li { padding: 12px; display: flex; flex-direction: column; gap: 10px; }
+.press-files img { display: block; width: 100%; height: 200px; object-fit: contain; border-radius: 12px; background: var(--panel-solid); }
+.press-files p { margin: 0; overflow-wrap: anywhere; }
