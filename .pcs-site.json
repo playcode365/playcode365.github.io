@@ -1,0 +1,27 @@
+{
+  "generator": "pcs web build",
+  "template": "1.0.0",
+  "files": [
+    ".nojekyll",
+    "404.html",
+    "about/index.html",
+    "assets/brand/favicon-16.png",
+    "assets/brand/favicon-32.png",
+    "assets/brand/favicon-48.png",
+    "assets/brand/icon-180.png",
+    "assets/brand/icon-192.png",
+    "assets/brand/icon-512.png",
+    "assets/brand/playcode-logo.png",
+    "assets/favicon.svg",
+    "assets/site.css",
+    "assets/site.js",
+    "en/about/index.html",
+    "en/index.html",
+    "en/news/index.html",
+    "index.html",
+    "news/index.html",
+    "robots.txt",
+    "site.webmanifest",
+    "sitemap.xml"
+  ]
+}

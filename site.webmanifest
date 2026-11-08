@@ -1,0 +1,23 @@
+{
+  "name": "PlayCode",
+  "short_name": "PlayCode",
+  "description": "작고 단단한 게임을 만듭니다",
+  "lang": "ko",
+  "start_url": "/",
+  "scope": "/",
+  "display": "browser",
+  "background_color": "#07081a",
+  "theme_color": "#07081a",
+  "icons": [
+    {
+      "src": "/assets/brand/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/brand/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

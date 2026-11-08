@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://playcode365.github.io/sitemap.xml
