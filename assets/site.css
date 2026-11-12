@@ -285,3 +285,10 @@ main { display: block; outline: none; }
 .press-files li { padding: 12px; display: flex; flex-direction: column; gap: 10px; }
 .press-files img { display: block; width: 100%; height: 200px; object-fit: contain; border-radius: 12px; background: var(--panel-solid); }
 .press-files p { margin: 0; overflow-wrap: anywhere; }
+
+/* Phones: a one-column grid sizes its column to the widest unbreakable run of text unless told otherwise, which
+   made the page wider than the screen (game page description on 320–390 px). Columns may shrink; long text breaks. */
+:where(.hero-grid, .card-body, .about-strip, .news-list, .notice, .game-hero, .game-desc, .facts, .two, .stack, .inquiry, .field, .foot-grid) { grid-template-columns: minmax(0, 1fr); } /* :where = no specificity: the wider layouts in @media still win */
+.check { grid-template-columns: auto minmax(0, 1fr); }
+.prose, .card-body, .facts dd { overflow-wrap: anywhere; }
+html, body { overflow-x: clip; }
