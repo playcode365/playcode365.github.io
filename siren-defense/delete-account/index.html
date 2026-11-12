@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src &#39;self&#39;; img-src &#39;self&#39; data:; style-src &#39;self&#39; &#39;unsafe-inline&#39;; script-src &#39;self&#39;; connect-src &#39;self&#39;; form-action &#39;self&#39;; base-uri &#39;self&#39;; object-src &#39;none&#39;">
+<meta http-equiv="Content-Security-Policy" content="default-src &#39;self&#39;; img-src &#39;self&#39; data:; style-src &#39;self&#39; &#39;unsafe-inline&#39;; script-src &#39;self&#39;; connect-src &#39;self&#39; https://filxqzkjwnjyiwpwygvg.supabase.co; form-action &#39;self&#39;; base-uri &#39;self&#39;; object-src &#39;none&#39;">
 <title>사이렌 디펜스 계정 삭제 — PlayCode365</title>
 <meta name="description" content="사이렌 디펜스 계정과 개인 데이터를 삭제하는 방법입니다.">
 <link rel="canonical" href="https://playcode365.github.io/siren-defense/delete-account/"><link rel="alternate" hreflang="ko" href="https://playcode365.github.io/siren-defense/delete-account/"><link rel="alternate" hreflang="en" href="https://playcode365.github.io/en/siren-defense/delete-account/"><link rel="alternate" hreflang="x-default" href="https://playcode365.github.io/siren-defense/delete-account/">
@@ -47,7 +47,17 @@ img{max-width:100%;height:auto}
 <div class="panel pad prose"><h2>게임 안에서 삭제하기</h2><p>게임에서 <strong>설정 › 계정 삭제</strong>를 누르고 안내에 따라 확인하면 삭제가 시작됩니다.</p></div>
 <div class="panel pad prose"><h2>삭제되는 정보</h2><ul><li>계정 정보와 게임 진행 데이터, 기기 정보, 문의 내용이 삭제됩니다.</li><li>요청 후 7일 동안은 다시 로그인하면 삭제를 취소할 수 있어요.</li><li>법령에 따라 보관해야 하는 결제 기록은 개인을 알아볼 수 없게 분리한 뒤 정해진 기간 동안만 보관합니다.</li></ul></div>
 </div>
-<div class="panel pad"><h2>웹에서 요청하기</h2><p>게임을 지웠거나 실행할 수 없다면 아래 양식으로 요청해 주세요. 확인 후 입력한 이메일로 안내를 보내 드려요.</p><p class="mail-cta">이메일로 요청하려면 <a href="mailto:playcode365@gmail.com">playcode365@gmail.com</a>로 보내 주세요. 제목에 &quot;계정 삭제 요청&quot;과 게임 이름을 적어 주세요.</p></div>
+<div class="panel pad"><h2>웹에서 요청하기</h2><p>게임을 지웠거나 실행할 수 없다면 아래 양식으로 요청해 주세요. 확인 후 입력한 이메일로 안내를 보내 드려요.</p><form class="inquiry" data-endpoint="https://filxqzkjwnjyiwpwygvg.supabase.co/functions/v1/inquiry-submit" data-key="sb_publishable_SBxyjOzyGKofjS63gfrRCw_FoK4Owk4" data-game="siren-defense" data-locale="ko" data-page="/siren-defense/delete-account/" novalidate>
+<div class="field"><label for="inq-email">이메일 <span class="req">(필수)</span></label><input id="inq-email" name="email" type="email" required maxlength="254" autocomplete="email" inputmode="email"></div>
+<div class="field"><label for="inq-name">이름 <span class="opt">(선택)</span></label><input id="inq-name" name="name" type="text" maxlength="100" autocomplete="name"></div>
+<input type="hidden" name="category" value="account_deletion">
+<div class="field"><label for="inq-msg">내용 <span class="req">(필수)</span></label><textarea id="inq-msg" name="message" required maxlength="4000" rows="6" aria-describedby="inq-count">계정 삭제를 요청합니다.</textarea><p class="count" id="inq-count">0 / 4000</p></div>
+<div class="hp" aria-hidden="true"><label for="inq-hp">이 칸은 비워 두세요</label><input id="inq-hp" name="hp" type="text" tabindex="-1" autocomplete="off"></div>
+<div class="field check"><input id="inq-ok" name="confirm" type="checkbox" required><label for="inq-ok">삭제한 계정과 데이터는 되돌릴 수 없다는 것을 이해했습니다.</label></div>
+<p class="form-note">보낸 내용은 답변을 위해서만 쓰고, 개인정보처리방침에 따라 보관합니다.</p>
+<button class="btn btn-primary" type="submit">보내기</button>
+<p class="form-status" role="status" aria-live="polite"></p>
+</form></div>
 </section>
 <section class="wrap sec"><nav class="subnav" aria-label="도움말과 정책"><a href="/siren-defense/support/">고객 지원</a><a href="/siren-defense/privacy/">개인정보처리방침</a><a href="/siren-defense/terms/">이용약관</a><a href="/siren-defense/delete-account/" aria-current="page">계정 삭제</a><a href="/siren-defense/credits/">크레딧</a></nav></section>
 </main>

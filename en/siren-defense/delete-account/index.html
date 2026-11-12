@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src &#39;self&#39;; img-src &#39;self&#39; data:; style-src &#39;self&#39; &#39;unsafe-inline&#39;; script-src &#39;self&#39;; connect-src &#39;self&#39;; form-action &#39;self&#39;; base-uri &#39;self&#39;; object-src &#39;none&#39;">
+<meta http-equiv="Content-Security-Policy" content="default-src &#39;self&#39;; img-src &#39;self&#39; data:; style-src &#39;self&#39; &#39;unsafe-inline&#39;; script-src &#39;self&#39;; connect-src &#39;self&#39; https://filxqzkjwnjyiwpwygvg.supabase.co; form-action &#39;self&#39;; base-uri &#39;self&#39;; object-src &#39;none&#39;">
 <title>Siren Defense Delete account — PlayCode365</title>
 <meta name="description" content="How to delete your Siren Defense account and personal data.">
 <link rel="canonical" href="https://playcode365.github.io/en/siren-defense/delete-account/"><link rel="alternate" hreflang="ko" href="https://playcode365.github.io/siren-defense/delete-account/"><link rel="alternate" hreflang="en" href="https://playcode365.github.io/en/siren-defense/delete-account/"><link rel="alternate" hreflang="x-default" href="https://playcode365.github.io/siren-defense/delete-account/">
@@ -47,7 +47,17 @@ img{max-width:100%;height:auto}
 <div class="panel pad prose"><h2>Delete in the game</h2><p>In the game, open <strong>Settings › Delete account</strong> and confirm. Deletion starts right away.</p></div>
 <div class="panel pad prose"><h2>What is deleted</h2><ul><li>Your account, game progress, device information and support messages are deleted.</li><li>For 7 days after the request you can cancel by signing in again.</li><li>Payment records that the law requires us to keep are separated from your identity and kept only for the required period.</li></ul></div>
 </div>
-<div class="panel pad"><h2>Request on the web</h2><p>If you removed the game or cannot open it, send a request with the form below. We will reply to the email you enter.</p><p class="mail-cta">To request by email, write to <a href="mailto:playcode365@gmail.com">playcode365@gmail.com</a> with &quot;Account deletion&quot; and the game name in the subject.</p></div>
+<div class="panel pad"><h2>Request on the web</h2><p>If you removed the game or cannot open it, send a request with the form below. We will reply to the email you enter.</p><form class="inquiry" data-endpoint="https://filxqzkjwnjyiwpwygvg.supabase.co/functions/v1/inquiry-submit" data-key="sb_publishable_SBxyjOzyGKofjS63gfrRCw_FoK4Owk4" data-game="siren-defense" data-locale="en" data-page="/en/siren-defense/delete-account/" novalidate>
+<div class="field"><label for="inq-email">Email <span class="req">(required)</span></label><input id="inq-email" name="email" type="email" required maxlength="254" autocomplete="email" inputmode="email"></div>
+<div class="field"><label for="inq-name">Name <span class="opt">(optional)</span></label><input id="inq-name" name="name" type="text" maxlength="100" autocomplete="name"></div>
+<input type="hidden" name="category" value="account_deletion">
+<div class="field"><label for="inq-msg">Message <span class="req">(required)</span></label><textarea id="inq-msg" name="message" required maxlength="4000" rows="6" aria-describedby="inq-count">I would like to delete my account.</textarea><p class="count" id="inq-count">0 / 4000</p></div>
+<div class="hp" aria-hidden="true"><label for="inq-hp">Leave this field empty</label><input id="inq-hp" name="hp" type="text" tabindex="-1" autocomplete="off"></div>
+<div class="field check"><input id="inq-ok" name="confirm" type="checkbox" required><label for="inq-ok">I understand that a deleted account and its data cannot be restored.</label></div>
+<p class="form-note">We use what you send only to reply, and keep it as described in our privacy policy.</p>
+<button class="btn btn-primary" type="submit">Send</button>
+<p class="form-status" role="status" aria-live="polite"></p>
+</form></div>
 </section>
 <section class="wrap sec"><nav class="subnav" aria-label="Help and policies"><a href="/en/siren-defense/support/">Support</a><a href="/en/siren-defense/privacy/">Privacy Policy</a><a href="/en/siren-defense/terms/">Terms of Service</a><a href="/en/siren-defense/delete-account/" aria-current="page">Delete account</a><a href="/en/siren-defense/credits/">Credits</a></nav></section>
 </main>

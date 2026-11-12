@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src &#39;self&#39;; img-src &#39;self&#39; data:; style-src &#39;self&#39; &#39;unsafe-inline&#39;; script-src &#39;self&#39;; connect-src &#39;self&#39;; form-action &#39;self&#39;; base-uri &#39;self&#39;; object-src &#39;none&#39;">
+<meta http-equiv="Content-Security-Policy" content="default-src &#39;self&#39;; img-src &#39;self&#39; data:; style-src &#39;self&#39; &#39;unsafe-inline&#39;; script-src &#39;self&#39;; connect-src &#39;self&#39; https://filxqzkjwnjyiwpwygvg.supabase.co; form-action &#39;self&#39;; base-uri &#39;self&#39;; object-src &#39;none&#39;">
 <title>Siren Defense Support — PlayCode365</title>
 <meta name="description" content="Tell us about any problem or question you have while playing.">
 <link rel="canonical" href="https://playcode365.github.io/en/siren-defense/support/"><link rel="alternate" hreflang="ko" href="https://playcode365.github.io/siren-defense/support/"><link rel="alternate" hreflang="en" href="https://playcode365.github.io/en/siren-defense/support/"><link rel="alternate" hreflang="x-default" href="https://playcode365.github.io/siren-defense/support/">
@@ -45,7 +45,17 @@ img{max-width:100%;height:auto}
 <section class="wrap sec two">
 <div class="panel pad"><h2 id="h-faq">FAQ</h2><p>We are putting together common questions. Until then, send us your question with the contact form.</p>
 <div class="faqs"><details class="faq" id="delete-account-faq"><summary>How do I delete my account and data?</summary><div class="faq-a prose"><p>You can delete it inside the game, or send a request from the account deletion page. <a href="/en/siren-defense/delete-account/">Delete account →</a></p><p class="faq-link"><a href="#delete-account-faq" aria-label="Link to this question: How do I delete my account and data?">#</a></p></div></details></div></div>
-<div class="panel pad"><h2>Contact us</h2><p class="mail-cta">Please email us at <a href="mailto:playcode365@gmail.com">playcode365@gmail.com</a>.</p></div>
+<div class="panel pad"><h2>Contact us</h2><form class="inquiry" data-endpoint="https://filxqzkjwnjyiwpwygvg.supabase.co/functions/v1/inquiry-submit" data-key="sb_publishable_SBxyjOzyGKofjS63gfrRCw_FoK4Owk4" data-game="siren-defense" data-locale="en" data-page="/en/siren-defense/support/" novalidate>
+<div class="field"><label for="inq-email">Email <span class="req">(required)</span></label><input id="inq-email" name="email" type="email" required maxlength="254" autocomplete="email" inputmode="email"></div>
+<div class="field"><label for="inq-name">Name <span class="opt">(optional)</span></label><input id="inq-name" name="name" type="text" maxlength="100" autocomplete="name"></div>
+<div class="field"><label for="inq-cat">Topic</label><select id="inq-cat" name="category"><option value="bug">Bug report</option><option value="payment">Payment</option><option value="account">Account</option><option value="suggestion">Ideas &amp; partnerships</option><option value="other">Other</option></select></div>
+<div class="field"><label for="inq-msg">Message <span class="req">(required)</span></label><textarea id="inq-msg" name="message" required maxlength="4000" rows="6" aria-describedby="inq-count"></textarea><p class="count" id="inq-count">0 / 4000</p></div>
+<div class="hp" aria-hidden="true"><label for="inq-hp">Leave this field empty</label><input id="inq-hp" name="hp" type="text" tabindex="-1" autocomplete="off"></div>
+
+<p class="form-note">We use what you send only to reply, and keep it as described in our privacy policy.</p>
+<button class="btn btn-primary" type="submit">Send</button>
+<p class="form-status" role="status" aria-live="polite"></p>
+</form></div>
 </section>
 <section class="wrap sec"><nav class="subnav" aria-label="Help and policies"><a href="/en/siren-defense/support/" aria-current="page">Support</a><a href="/en/siren-defense/privacy/">Privacy Policy</a><a href="/en/siren-defense/terms/">Terms of Service</a><a href="/en/siren-defense/delete-account/">Delete account</a><a href="/en/siren-defense/credits/">Credits</a></nav></section>
 </main>
