@@ -117,6 +117,9 @@
         hp: ''
       };
       if (name && name.value.trim()) body.name = name.value.trim();
+      // Shared server: the game this form belongs to (the server checks it against its registry).
+      var game = form.getAttribute('data-game');
+      if (game) body.game = game;
       button.disabled = true;
       say(m.sending, '');
       fetch(form.getAttribute('data-endpoint'), {
