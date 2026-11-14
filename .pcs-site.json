@@ -31,6 +31,12 @@
     "en/siren-defense/privacy/index.html",
     "en/siren-defense/support/index.html",
     "en/siren-defense/terms/index.html",
+    "en/waterway-gardener/credits/index.html",
+    "en/waterway-gardener/delete-account/index.html",
+    "en/waterway-gardener/index.html",
+    "en/waterway-gardener/privacy/index.html",
+    "en/waterway-gardener/support/index.html",
+    "en/waterway-gardener/terms/index.html",
     "imposters/credits/index.html",
     "imposters/index.html",
     "imposters/privacy/index.html",
@@ -55,6 +61,12 @@
     "siren-defense/support/index.html",
     "siren-defense/terms/index.html",
     "site.webmanifest",
-    "sitemap.xml"
+    "sitemap.xml",
+    "waterway-gardener/credits/index.html",
+    "waterway-gardener/delete-account/index.html",
+    "waterway-gardener/index.html",
+    "waterway-gardener/privacy/index.html",
+    "waterway-gardener/support/index.html",
+    "waterway-gardener/terms/index.html"
   ]
 }
