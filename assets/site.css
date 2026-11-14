@@ -108,15 +108,21 @@ main { display: block; outline: none; }
 @supports not ((-webkit-background-clip: text) or (background-clip: text)) { .grad { color: var(--text); } }
 
 .games-sec + .games-sec { margin-top: 48px; }
-.grid { list-style: none; margin: 0; padding: 0; display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); }
-.grid-live { grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); gap: 20px; }
+/* Same column width in every section: 3 columns on a PC-wide page, 2 on a tablet, 1 on a phone. */
+.grid { list-style: none; margin: 0; padding: 0; display: grid; gap: 20px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr)); }
 .card { position: relative; overflow: hidden; display: flex; flex-direction: column; transition: transform .22s, border-color .22s, box-shadow .22s; }
 .card:hover, .card:focus-within { transform: translateY(-3px); border-color: color-mix(in srgb, var(--accent) 60%, transparent); box-shadow: 0 0 0 1px color-mix(in srgb, var(--accent) 30%, transparent), 0 24px 60px -30px var(--accent); }
 .card:focus-within { outline: 2px solid var(--accent-fg); outline-offset: 3px; }
-.card-art { aspect-ratio: 16 / 10; overflow: hidden; border-bottom: 1px solid var(--line); }
-.grid-dev .card-art, .grid-past .card-art { aspect-ratio: 16 / 8; }
-.card-art img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.card-body { padding: 18px 20px 20px; display: grid; gap: 6px; justify-items: start; }
+.card-art { aspect-ratio: 16 / 11; overflow: hidden; border-bottom: 1px solid var(--line); }
+.card-art img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
+/* Three phone screenshots peeking up from the bottom edge, on a glow in the game's accent colour. */
+.card-shots { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; align-items: start; padding: 18px 18px 0; background:
+  radial-gradient(circle at 50% 120%, color-mix(in srgb, var(--accent) 55%, transparent), transparent 70%),
+  var(--panel-solid); }
+.card-shots img { height: auto; aspect-ratio: auto; border-radius: 14px; border: 1px solid var(--line-2); box-shadow: 0 14px 30px -18px rgba(0, 0, 0, .8); transition: transform .3s; }
+.card-shots img:nth-child(2) { transform: translateY(-6px); }
+.card:hover .card-shots img:nth-child(2) { transform: translateY(-12px); }
+.card-body { padding: 18px 20px 20px; display: flex; flex-direction: column; align-items: flex-start; gap: 6px; flex: 1; }
 .card h3 { font-size: 1.22rem; margin: 6px 0 0; }
 .card-link { color: var(--text); text-decoration: none; }
 .card-link::after { content: ""; position: absolute; inset: 0; }
@@ -124,14 +130,7 @@ main { display: block; outline: none; }
 .card-sub { color: var(--muted); margin: 0; }
 .card-meta { color: var(--faint); font-size: .85rem; margin: 4px 0 0; }
 .card-promo { color: var(--text); margin: 6px 0 0; }
-.card-cta { margin: 10px 0 0; font-weight: 700; color: var(--accent-fg); }
-@media (min-width: 900px) {
-  .card.feature { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); }
-  .card.feature .card-art { aspect-ratio: 16 / 11; border-bottom: 0; border-right: 1px solid var(--line); }
-  .card.feature .card-body { align-content: center; padding: 40px; gap: 8px; }
-  .card.feature h3 { font-size: clamp(1.6rem, 1rem + 1.6vw, 2.4rem); }
-  .card.feature .card-sub { font-size: 1.1rem; }
-}
+.card-cta { margin: auto 0 0; padding-top: 10px; font-weight: 700; color: var(--accent-fg); }
 
 .art-gen { position: relative; display: grid; place-items: center; background:
   radial-gradient(circle at 28% 22%, color-mix(in srgb, var(--accent) 60%, transparent), transparent 58%),
